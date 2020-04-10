@@ -45,7 +45,7 @@ public abstract class AbstractBaseTest {
 
     @BeforeMethod
     public void setup() {
-        driver.get(ConfigurationReader.getProperty("url"));
+        driver.get(ConfigurationReader.getProperty("login1"));
         driver.manage().window().maximize();
     }
 

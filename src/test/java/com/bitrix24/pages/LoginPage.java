@@ -1,5 +1,6 @@
 package com.bitrix24.pages;
 
+import com.bitrix24.tests.AbstractBaseTest;
 import com.bitrix24.utilities.BrowserUtilities;
 import com.bitrix24.utilities.Driver;
 import org.openqa.selenium.Keys;
@@ -7,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage extends AbstractBasePage {
 
     @FindBy(name = "USER_LOGIN")
     protected WebElement username;
