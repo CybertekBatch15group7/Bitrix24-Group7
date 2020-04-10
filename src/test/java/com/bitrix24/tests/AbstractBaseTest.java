@@ -34,7 +34,7 @@ public abstract class AbstractBaseTest {
         }
         extentHtmlReporter = new ExtentHtmlReporter(reportPath);
         extentReports.attachReporter(extentHtmlReporter);
-        extentHtmlReporter.config().setReportName("WebOrders Automation");
+        extentHtmlReporter.config().setReportName("CRM 24 Automation");
 
     }
 
