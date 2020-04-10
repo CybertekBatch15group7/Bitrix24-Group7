@@ -5,10 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class Driver {
-
-    private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
 
     //same for everyone
     private static WebDriver driver;
@@ -22,7 +21,7 @@ public class Driver {
     public synchronized static WebDriver getDriver() {
         //if webdriver object doesn't exist
         //create it
-        if (driverPool.get() == null) {
+        if (driver == null) {
             //specify browser type in configuration.properties file
             String browser = ConfigurationReader.getProperty("browser").toLowerCase();
             switch (browser) {
@@ -30,18 +29,20 @@ public class Driver {
                     WebDriverManager.chromedriver().version("79").setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--start-maximized");
-                    driverPool.set(new ChromeDriver(chromeOptions));
+                    driver = new ChromeDriver(chromeOptions);
                     break;
                 case "chromeheadless":
                     //to run chrome without interface (headless mode)
                     WebDriverManager.chromedriver().version("79").setup();
                     ChromeOptions options = new ChromeOptions();
                     options.setHeadless(true);
-                    driverPool.set(new ChromeDriver(options));
+                    driver = new ChromeDriver(options);
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driverPool.set(new FirefoxDriver());
+                    FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    firefoxOptions.addArguments("--start-maximized");
+                    driver = new FirefoxDriver(firefoxOptions);
                     break;
                 default:
                     throw new RuntimeException("Wrong browser name!");
@@ -51,9 +52,8 @@ public class Driver {
     }
 
     public static void closeDriver() {
-        if (driverPool != null) {
-            driverPool.get().quit();
-            driverPool.remove();
+        if (driver != null) {
+            driver.quit();
         }
     }
 }
