@@ -1,6 +1,6 @@
 package com.bitrix24.tests;
 
-import com.bitrix24.pages.ActivityStream.LoginPage;
+import com.bitrix24.pages.LoginPage;
 import com.bitrix24.utilities.Driver;
 import org.testng.Assert;
 import org.testng.annotations.Test;

@@ -1,4 +1,4 @@
-package com.bitrix24.pages.ActivityStream;
+package com.bitrix24.pages;
 
 import com.bitrix24.pages.AbstractBasePage;
 import com.bitrix24.utilities.BrowserUtilities;
