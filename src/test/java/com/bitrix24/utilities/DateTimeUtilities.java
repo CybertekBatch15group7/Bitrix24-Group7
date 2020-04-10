@@ -1,4 +1,4 @@
-package com.utilities;
+package com.bitrix24.utilities;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
