@@ -2,3 +2,4 @@
 *.iml
 target
 test-output
+src/test/java/com/bitrix24/tests/ActivityStream/
