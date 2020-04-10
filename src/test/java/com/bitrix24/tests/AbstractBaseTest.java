@@ -25,7 +25,7 @@ public abstract class AbstractBaseTest {
     @BeforeTest
     public void beforeTest() {
         extentReports = new ExtentReports();
-        String reportPath = "";
+        String reportPath;
 
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             reportPath = System.getProperty("user.dir") + "\\test-output\\report.html";
@@ -34,7 +34,7 @@ public abstract class AbstractBaseTest {
         }
         extentHtmlReporter = new ExtentHtmlReporter(reportPath);
         extentReports.attachReporter(extentHtmlReporter);
-        extentHtmlReporter.config().setReportName("WebOrders Automation");
+        extentHtmlReporter.config().setReportName("CRM 24 Automation");
 
     }
 

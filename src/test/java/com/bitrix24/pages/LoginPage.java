@@ -2,6 +2,7 @@ package com.bitrix24.pages;
 
 import com.bitrix24.tests.AbstractBaseTest;
 import com.bitrix24.utilities.BrowserUtilities;
+import com.bitrix24.utilities.ConfigurationReader;
 import com.bitrix24.utilities.Driver;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -30,6 +31,11 @@ public class LoginPage extends AbstractBasePage {
         this.username.sendKeys(username);
         this.password.sendKeys(password, Keys.ENTER);
         BrowserUtilities.waitForPageToLoad(10);
+    }
+
+    public void login(){
+        username.sendKeys(ConfigurationReader.getProperty("username"));
+        password.sendKeys(ConfigurationReader.getProperty("password"));
     }
 
 }

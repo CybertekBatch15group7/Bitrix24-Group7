@@ -11,14 +11,10 @@ public class WorkflowDirectoryPageTest extends AbstractBaseTest{
     @Test
     public void verifyHelpDeskAccess(){
 
-        String username = "helpdesk13@cybertekschool.com";
-        String password = "UserUser";
-
         LoginPage loginPage = new LoginPage();
         HomePage homePage = new HomePage();
 
-
-        loginPage.login(username, password);
+        loginPage.login();
         homePage.clickOnMore();
         homePage.clickOnWorkflow();
         homePage.clickOnWorkflowDirectory();
