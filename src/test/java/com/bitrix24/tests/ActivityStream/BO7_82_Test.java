@@ -1,3 +1,14 @@
+package com.bitrix24.tests.ActivityStream;
+
+import com.bitrix24.pages.ActivityStream.BO7_82_Page;
+import com.bitrix24.pages.LoginPage;
+import com.bitrix24.tests.AbstractBaseTest;
+import com.bitrix24.utilities.Driver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 public class BO7_82_Test extends AbstractBaseTest {
     @Test
     public void uploadFileIconClickedTest(){ // AC-1
