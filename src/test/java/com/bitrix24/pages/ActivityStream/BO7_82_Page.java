@@ -18,13 +18,13 @@ public class BO7_82_Page extends AbstractBasePage {
     @FindBy(xpath="//a[@id='bx-destination-tag']")
     private WebElement addMoreElement;
 
-    @FindBy(xpath = "//div[5]//div[1]//div[1]//a[3]")
+    @FindBy(linkText = "E-mail users")
     private WebElement emailUsersElement;
 
-    @FindBy(xpath = "//div[5]//div[1]//div[1]//a[2]")
+    @FindBy(linkText = "Employees and departments")
     private WebElement emplAndDeptsElement;
 
-    @FindBy(xpath = "//div[5]//div[1]//div[1]//a[1]")
+    @FindBy(linkText = "Recent")
     private WebElement recentElement;
 
     public void clickOnMessage(){

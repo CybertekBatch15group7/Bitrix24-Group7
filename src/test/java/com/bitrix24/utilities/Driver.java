@@ -41,15 +41,17 @@ public class Driver {
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driverPool.set(new FirefoxDriver());
+                    FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    firefoxOptions.addArguments("--start-maximized");
+                    driverPool.set(new FirefoxDriver(firefoxOptions));
                     break;
 
                 case "firefoxheadless":
                     //to run chrome without interface (headless mode)
-                    WebDriverManager.firefoxdriver().version("79").setup();
-                    FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    firefoxOptions.setHeadless(true);
-                    driverPool.set(new FirefoxDriver(firefoxOptions));
+                    WebDriverManager.firefoxdriver().setup();
+                    FirefoxOptions firefoxOptions1 = new FirefoxOptions();
+                    firefoxOptions1.setHeadless(true);
+                    driverPool.set(new FirefoxDriver(firefoxOptions1));
                     break;
                 default:
                     throw new RuntimeException("Wrong browser name!");
