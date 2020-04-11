@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class Driver {
 
@@ -41,6 +42,14 @@ public class Driver {
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driverPool.set(new FirefoxDriver());
+                    break;
+
+                case "firefoxheadless":
+                    //to run chrome without interface (headless mode)
+                    WebDriverManager.firefoxdriver().version("79").setup();
+                    FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    firefoxOptions.setHeadless(true);
+                    driverPool.set(new FirefoxDriver(firefoxOptions));
                     break;
                 default:
                     throw new RuntimeException("Wrong browser name!");
