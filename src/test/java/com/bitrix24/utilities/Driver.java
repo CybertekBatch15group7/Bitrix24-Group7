@@ -47,7 +47,7 @@ public class Driver {
                     throw new RuntimeException("Wrong browser name!");
             }
         }
-        return driver;
+        return driverPool.get();
     }
 
     public static void closeDriver() {

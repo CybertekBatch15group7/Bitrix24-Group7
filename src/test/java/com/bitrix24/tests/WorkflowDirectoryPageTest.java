@@ -10,6 +10,7 @@ public class WorkflowDirectoryPageTest extends AbstractBaseTest{
 
     @Test
     public void verifyHelpDeskAccess(){
+        extentTest = extentReports.createTest("Verify warning message");
 
         LoginPage loginPage = new LoginPage();
         HomePage homePage = new HomePage();
@@ -19,10 +20,12 @@ public class WorkflowDirectoryPageTest extends AbstractBaseTest{
         homePage.clickOnWorkflow();
         homePage.clickOnWorkflowDirectory();
 
-        String popup = driver.findElement(By.xpath("div[@id='menu-popup-lists']")).getText();
+        String popup = driver.findElement(By.xpath("//span[@class='bx-lists-alert-text']")).getText();
         String expected = "No access";
 
         Assert.assertEquals(popup, expected);
+
+        extentTest.pass("Warning message was verified");
 
     }
 

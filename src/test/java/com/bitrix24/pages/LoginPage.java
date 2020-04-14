@@ -1,6 +1,5 @@
 package com.bitrix24.pages;
 
-import com.bitrix24.tests.AbstractBaseTest;
 import com.bitrix24.utilities.BrowserUtilities;
 import com.bitrix24.utilities.ConfigurationReader;
 import com.bitrix24.utilities.Driver;
@@ -35,7 +34,7 @@ public class LoginPage extends AbstractBasePage {
 
     public void login(){
         username.sendKeys(ConfigurationReader.getProperty("username"));
-        password.sendKeys(ConfigurationReader.getProperty("password"));
+        password.sendKeys(ConfigurationReader.getProperty("password"), Keys.ENTER);
     }
 
 }
