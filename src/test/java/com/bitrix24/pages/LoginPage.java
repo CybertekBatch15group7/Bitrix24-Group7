@@ -27,8 +27,8 @@ public class LoginPage extends AbstractBasePage {
     }
 
     public void login(String username, String password){
-        this.username.sendKeys(username);
-        this.password.sendKeys(password, Keys.ENTER);
+        this.username.sendKeys(ConfigurationReader.getProperty(username));
+        this.password.sendKeys(ConfigurationReader.getProperty(password), Keys.ENTER);
         BrowserUtilities.waitForPageToLoad(10);
     }
 

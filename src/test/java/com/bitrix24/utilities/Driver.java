@@ -9,9 +9,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Driver {
 
     private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
-
-    //same for everyone
-    private static WebDriver driver;
+//
+//    //same for everyone
+//    private static WebDriver driver;
 
     //so no one can create object of Driver class
     //everyone should call static getter method instead
