@@ -47,13 +47,6 @@ public class EventPage extends AbstractBasePage{
     private WebElement submitButton;
 
 
-    /*
-
-        driver.findElement(By.id("bx-b-uploadfile-blogPostForm_calendar")).click();
-        BrowserUtilities.wait(2);
-        driver.findElement(By.name("bxu_files[]")).sendKeys(System.getProperty("user.dir")+"/pom.xml");
-        BrowserUtilities.wait(2);
-     */
 
    public void clickOnVisualEditor(){
        BrowserUtilities.waitForPageToLoad(10);
