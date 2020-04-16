@@ -4,11 +4,9 @@ import com.bitrix24.pages.AbstractBasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import com.bitrix24.utilities.Driver;
-import com.bitrix24.utilities.BrowserUtilities;
 
 
-public class activity_Stream_01 extends AbstractBasePage {
+public class activity_Stream_03 extends AbstractBasePage {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -28,6 +26,6 @@ public class activity_Stream_01 extends AbstractBasePage {
         driver.quit();
 
 
-
+        
     }
 }
