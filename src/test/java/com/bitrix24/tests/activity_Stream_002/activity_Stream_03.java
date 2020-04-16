@@ -25,8 +25,8 @@ public class activity_Stream_03 extends AbstractBasePage {
         Thread.sleep(2000);
 
         // This does not work yet!
-        driver.findElement(By.xpath("//*[@id=\'diskuf-selectdialog-rYPOqGg\']/div[2]/table/tbody/tr[1]/td[1]/div/span/span/span[1]")).click();
-        System.out.println(driver.findElement(By.xpath("//*[@id=\'diskuf-selectdialog-rYPOqGg\']/div[2]/table/tbody/tr[1]/td[1]/div/span/span/span[1]")).getText());
+        driver.findElement(By.partialLinkText("Upload files and images")).click();
+        System.out.println(driver.findElement(By.partialLinkText("Upload files and images")).getText());
         Thread.sleep(2000);
         driver.quit();
 
