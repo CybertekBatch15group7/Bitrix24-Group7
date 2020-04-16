@@ -18,10 +18,13 @@ public class activity_Stream_03 extends AbstractBasePage {
         driver.findElement(By.name("USER_LOGIN")).sendKeys("helpdesk37@cybertekschool.com");
         driver.findElement(By.name("USER_PASSWORD")).sendKeys("UserUser");
         driver.findElement(By.cssSelector("#login-popup > form > div.log-popup-footer > input")).click();
+
+        driver.findElement(By.cssSelector("#microoPostFormLHE_blogPostForm_inner > span.feed-add-post-micro-title")).click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//*[@id=\"feed-add-post-form-tab-tasks\"]/span")).click();
-        Thread.sleep(5000);
-        driver.findElement(By.id("tasks-task-priority-cb")).click();
+        driver.findElement(By.cssSelector("#bx-b-uploadfile-blogPostForm")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id=\'diskuf-selectdialog-rYPOqGg\']/div[2]/table/tbody/tr[1]/td[1]/div/span/span/span[1]")).click();
+        System.out.println(driver.findElement(By.xpath("//*[@id=\'diskuf-selectdialog-rYPOqGg\']/div[2]/table/tbody/tr[1]/td[1]/div/span/span/span[1]")).getText());
         Thread.sleep(2000);
         driver.quit();
 
