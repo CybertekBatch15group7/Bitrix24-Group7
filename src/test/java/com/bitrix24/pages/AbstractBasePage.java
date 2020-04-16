@@ -57,6 +57,7 @@ public abstract class AbstractBasePage {
         BrowserUtilities.wait(5);
     }
 
+
     public void employersDepartments() {
         driver.findElement(By.xpath("//a[@href='#switchTab'][2]")).click();
         BrowserUtilities.wait(3);
@@ -106,3 +107,6 @@ public void clickSendBtn(){
         BrowserUtilities.wait(3);
 }
     }
+
+}
+
