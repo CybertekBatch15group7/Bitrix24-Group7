@@ -20,18 +20,14 @@ public class activity_Stream_03 extends AbstractBasePage {
         driver.findElement(By.cssSelector("#login-popup > form > div.log-popup-footer > input")).click();
 
         driver.findElement(By.cssSelector("#microoPostFormLHE_blogPostForm_inner > span.feed-add-post-micro-title")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.cssSelector("#bx-b-uploadfile-blogPostForm")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td/table/tbody/tr[1]/td[2]/table/tbody/tr/td/div/div[2]/div/div[1]/div/div/div[3]/div/div/form/div[1]/div/div[2]/div[3]/div[2]/span[1]")).click();
+        Thread.sleep(5000);
 
-        // This does not work yet! The Xpath works to print, but not to click.
+        driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td/table/tbody/tr[1]/td[2]/table/tbody/tr/td/div/div[2]/div/div[1]/div/div/div[3]/div/div/form/div[1]/div/div[2]/div[4]/div[2]/table/tbody/tr[1]/td[1]/div/span/span/span[2]"));
         System.out.println(driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td/table/tbody/tr[1]/td[2]/table/tbody/tr/td/div/div[2]/div/div[1]/div/div/div[3]/div/div/form/div[1]/div/div[2]/div[4]/div[2]/table/tbody/tr[1]/td[1]/div/span/span/span[1]/span")).getText());
-        driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td/table/tbody/tr[1]/td[2]/table/tbody/tr/td/div/div[2]/div/div[1]/div/div/div[3]/div/div/form/div[1]/div/div[2]/div[4]/div[2]/table/tbody/tr[1]/td[1]/div/span/span/span[1]/span")).click();
-        System.out.println(driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td/table/tbody/tr[1]/td[2]/table/tbody/tr/td/div/div[2]/div/div[1]/div/div/div[3]/div/div/form/div[1]/div/div[2]/div[4]/div[2]/table/tbody/tr[1]/td[1]/div/span/span/span[1]/span")).getText());
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.quit();
-
-
         
     }
 }
