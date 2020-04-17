@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.bitrix24.utilities.Driver;
 import com.bitrix24.utilities.BrowserUtilities;
 
+// 1. User should be able to click on "High Priority" checkbox
+// to set the current task to a top priority task.
 
 public class activity_Stream_01 extends AbstractBasePage {
     public static void main(String[] args) throws InterruptedException {
