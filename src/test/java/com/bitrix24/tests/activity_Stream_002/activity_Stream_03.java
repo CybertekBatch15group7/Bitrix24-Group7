@@ -24,7 +24,7 @@ public class activity_Stream_03 extends AbstractBasePage {
         // Clicking on send message box
         driver.findElement(By.cssSelector("#microoPostFormLHE_blogPostForm_inner > span.feed-add-post-micro-title")).click();
         Thread.sleep(1000);
-        //Upload Icone
+        //Upload Icon
         driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td/table/tbody/tr[1]/td[2]/table/tbody/tr/td/div/div[2]/div/div[1]/div/div/div[3]/div/div/form/div[1]/div/div[2]/div[3]/div[2]/span[1]")).click();
         Thread.sleep(1000);
         // Upload files and images
